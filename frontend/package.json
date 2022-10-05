@@ -1,0 +1,19 @@
+{
+  "name": "forgiveness-frontend",
+  "version": "1.0.0",
+  "description": "frontend for forgiveness requests on ethereum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server",
+    "start": "lite-server -p 3000"
+  },
+  "author": "katharine murphy",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "http-server": "^14.1.1",
+    "lite-server": "^2.5.4",
+    "web3": "^1.2.4"
+  }
+}
