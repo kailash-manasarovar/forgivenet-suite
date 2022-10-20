@@ -1,7 +1,15 @@
-This wbesite explains how to set up a local development environment so you can begin working on the forgivenet.
+<style>
+.md-sidebar, .md-sidebar.md-sidebar--secondary {
+    display: none;
+}
+</style>
+
+This website explains how to set up a local development environment so you can begin working on the forgivenet.
 
 Have fun.
 
-Any problems, raise an issue on [GitHub]().
+Any problems, raise an issue on [GitHub](https://github.com/kailash-manasarovar/forgivenet-suite).
 
+<center>
 ![Lion lying down with lamb](./images/lion-and-lamb.jpg)
+</center>

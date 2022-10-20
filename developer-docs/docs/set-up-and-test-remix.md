@@ -1,7 +1,4 @@
-There are a few steps you must take before the contracts are functional and the front end works locally.
-
-!!! important
-    This is a pain so it's probably easier to use Remix or, better still, go directly onto testing on testnet as all this is already set up.
+Go to [Remix](https://remix-project.org/) and click through to REMIX IDE.
 
 ## Steps
 

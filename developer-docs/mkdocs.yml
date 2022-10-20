@@ -10,11 +10,13 @@ copyright: <a href="https://consensys.net">forgivenet®</a> © 2022
 nav:
   - Home:
       - Welcome: index.md
-      - Quick start:
-          - Pre-requisites: prerequisites.md
-          - Compile and deploy: compile-deploy.md
-  - Local set up:
-      - Set up and test: set-up-and-test.md
+  - Quick start local:
+      - Pre-requisites: prerequisites.md
+      - Compile and deploy: compile-deploy.md
+      - Truffle console:
+          - Set up and test: set-up-and-test.md
+      - Remix:
+          - Set up and test: set-up-and-test-remix.md
 
 
 

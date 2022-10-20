@@ -5,7 +5,7 @@ Before we can interact with the Solidity smart contracts, we have to compile and
 * Open a terminal window.
 * Clone the repo:
 ```bash
-git clone tbc 
+git clone https://github.com/kailash-manasarovar/forgivenet-suite.git 
 ```
 * `cd` to the project root.
 
@@ -40,6 +40,9 @@ The `truffle-config.js` file has the relevant details required for running the G
 ## Deploy
 
 Now we can deploy the contract to our local running network on Ganache.
+
+!!! important
+    Everything is set up to here, so you don't have to do anything until this point.
 
 !!! info
     The file `2_deploy_contract.js` is provided with the relevant migrate code. 
