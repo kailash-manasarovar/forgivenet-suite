@@ -1,3 +1,11 @@
 .center-block {
     float: none !important
 }
+
+.panel-info {
+    margin-block: 10px;
+}
+
+#btn-reset {
+    margin-left: 10px;
+}

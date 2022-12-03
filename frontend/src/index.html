@@ -3,19 +3,48 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="forgivenet™ is a crytpo token reward sale application powered by forgiveness.">
-	<meta name="author" content="Dr K Murphy">
+	<meta name="description" content="Mine FRGVN crytpo tokens by requesting forgiveness. Help build a new world based on love, kindness, and humility.">
+	<meta name="author" content="Dr Jacqueline K Chardwood">
 	
-    <title>Request Forgiveness</title>
+    <title>forgivenet: the world's first spiritual tech</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Currency",
+            "name": "forgivenet",
+            "image": "https://1frgvn.com/frgvn-symbol.png",
+            "description": "Mine FRGVN crytpo tokens by requesting forgiveness. Help build a new world based on love for each other, kindness and humility for ourselves.",
+            "brand": {
+                "@type": "Brand",
+                "name": "1FRGVN"
+            }
+        }
+    </script>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@1FRGVN">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://1frgvn.com/">
+    <meta property="og:title" content="forgivenet: the world's first spiritual tech">
+    <meta property="og:description" content="Mine FRGVN crytpo tokens by requesting forgiveness. Help build a new world based on love, kindness, and humility.">
+    <meta property="og:image" content="https://1frgvn.com/lion-and-lamb.jpg">
 
     <!-- Bootstrap -->
-    <link href="css/extra.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/extra.css" rel="stylesheet">
 
     <!-- favicon -->
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <!-- canonical -->
+    <link rel="canonical" href="https://1frgvn.com/" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132413978-1"></script>
@@ -25,6 +54,16 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-132413978-1');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ0G9CXXKR"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-RZ0G9CXXKR');
     </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -38,9 +77,10 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-8 center-block">
-            <h1 class="text-center">Request Forgiveness</h1>
+            <h1 class="text-center">Request forgiveness</h1>
             <hr/>
             <div class="panel-info"><center>Make sure you're logged into <a href="https://metamask.io" target="_blank">MetaMask</a> and have some ETH in your account.</center>
+                <div class="panel-info" style="color: gray; font-style: italic"><center><a href="https://medium.com/@forgivenet/forgivenet-quick-start-guide-7a46a1ea4ce0" target="_blank">Quick start guide</a>.</center>
             </div>
             <br/>
 
@@ -52,31 +92,33 @@
                     <div class="row">
                         <div class="col-lg-8 center-block">
                             <div class="panel panel-default panel-primary">
-                                <div class="panel-heading">Input your forgiveness request and click Send Request.</div>
+                                <div class="panel-heading">Input your forgiveness request and click Send Request</div>
                                 <div class="panel-body">
 
                                     <form name="request-form">
                                         <div class="form-group">
                                             <label for="requestText">Request</label>
-                                            <div class="panel-info">Keep your request between 500 and 2000 characters. Check length <a href="https://ethproductions.github.io/bytes/" target="_blank">here</a>.
+                                            <div class="panel-info">Keep your request between 500 and 2000 characters. <a href="https://ethproductions.github.io/bytes/" target="_blank">Check length</a>.
                                             </div>
                                             <textarea name="requestText" class="form-control"
                                                       id="requestText" rows="10" cols="50" placeholder="For example, Dear John M. (don't use middle names or full surname). In around June of 1997 I said some dreadful things to you (explain here). We were at the Coffee Bar in the High Street (say town/country, but don't give exact addresses or telephone numbers, birth dates or personal details). I hope you can forgive me. I have never forgotten what happened between us and I have always felt bad about it. (Make sure there is enough info for the other party to know who you are. Pad out your request to more than 500 characters if it is too short)."></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label for="donation">Donation</label>
-                                            <div class="panel-info">We add a little extra to the gas price to disincentivize bad behavior. You are welcome to donate more. Input your donation in ETH.
+                                            <div class="panel-info">We add a little extra to the gas price to disincentivize bad behavior. You are welcome to donate more. Input your donation in ETH
                                             </div>
 
                                             <input type="number" class="form-control" id="donation"
-                                                   name="donation" placeholder="Current minimum spend is: 0.018 ETH" > <!--placeholder="Current minimum spend is: "-->
+                                                   name="donation" placeholder="Minimum donation 0.0123 ETH" > <!--placeholder="Current minimum spend is: "-->
 
                                         </div>
                                         <!-- <button type="button" class="btn btn-default" onclick="App.requestForgiveness();return false;">-->
+
                                         <button type="button" class="btn btn-default" onclick="App.validateInput();return false;">
 
                                             Send Request
                                         </button>
+                                        <div class="panel-info">By clicking Send Request, you agree to our <a href="./content/terms.pdf" target="_blank">Terms</a>.</div>
                                     </form>
 
                                 </div>
@@ -104,6 +146,15 @@
 
         </div>
     </div>
+
+        <div id="footer">
+            <center>
+            <div class="container">
+                <p class="muted credit"> &#169; 2021 Nandi Niramisa & Co Limited &nbsp | &nbsp <a href="./content/pp.pdf" target="_blank">Privacy Policy</a> &nbsp | &nbsp <a href="./content/forgivenet-whitepaper.pdf" target="_blank">Whitepaper</a> </p>
+            </div>
+            </center>
+        </div>
+    </div>
 </div>
 
 
@@ -115,7 +166,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 
 </body>
 
