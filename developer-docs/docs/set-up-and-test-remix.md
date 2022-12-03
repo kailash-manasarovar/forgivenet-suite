@@ -111,4 +111,4 @@ instance.requestForgiveness(string, {value: 1000000000000000})
 ```
 
 !!! warning
-    This last method always fails and I don't know why, so I'm going to check how to write it in Remix.
+    This last method always fails. The reason is the number precision. Every value has to be in wei so we have to redo all these methods to have wei values instead of whole numbers. In progress.

@@ -29,7 +29,7 @@ This command picks up any `.sol` files in the `/contracts` folder and compiles t
 
 This is what you should see in your build folder after compiling.
 
-![My compiled contracts](./images/compiled-contracts.png)
+![My compiled contracts](/images/compiled-contracts.png)
 
 ## Start up Ganache
 

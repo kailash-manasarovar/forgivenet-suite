@@ -4,7 +4,7 @@
 }
 </style>
 
-This website explains how to set up a local development environment so you can begin working on the forgivenet.
+This website explains how to set up a test environment so you can begin working on the forgivenet.
 
 Have fun.
 

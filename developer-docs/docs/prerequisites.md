@@ -1,5 +1,6 @@
 !!! warning
-    Local set up instructions are not yet complete. Please use the Goerli testnet instructions for now.
+    * Local set up instructions are not yet complete. 
+    * Please use the [Goerli testnet](/goerli/prerequisites) instructions for now.
 
 
 You will need the following:
