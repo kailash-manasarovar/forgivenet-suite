@@ -17,7 +17,8 @@ nav:
           - Set up and test: set-up-and-test.md
       - Remix:
           - Set up and test: set-up-and-test-remix.md
-
+  - Goerli testnet:
+      -
 
 
 theme:

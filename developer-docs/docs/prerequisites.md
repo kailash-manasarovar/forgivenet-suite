@@ -1,3 +1,7 @@
+!!! warning
+    Local set up instructions are not yet complete. Please use the Goerli testnet instructions for now.
+
+
 You will need the following:
 
 ## IDE
