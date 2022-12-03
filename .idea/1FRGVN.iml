@@ -6,6 +6,8 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/developer-docs/site" />
+      <excludeFolder url="file://$MODULE_DIR$/developer-docs/venv/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/developer-docs/venv/lib" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
