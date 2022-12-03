@@ -15,7 +15,3 @@
 .md-footer-meta a, .md-copyright, .md-copyright__highlight {
     color: darkslategrey !important;
 }
-
-body {
-    background-image: url( '../images/' );
-}

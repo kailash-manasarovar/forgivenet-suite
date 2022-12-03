@@ -1,6 +1,7 @@
 !!! warning
     * Local set up instructions are not yet complete. 
     * Please use the [Goerli testnet](/goerli/prerequisites) instructions for now.
+    * Feel free to use Sepolia.
 
 
 You will need the following:

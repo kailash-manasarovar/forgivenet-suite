@@ -5,7 +5,9 @@ Go to [Remix](https://remix-project.org/) and click through to REMIX IDE.
 This is the flow. Full details are given below.
 
 !!! warning
-    Skip any of these steps and the application won't work as expected. Moreover, the error messages will be meaningless.
+    * Skip any of these steps and the application won't work as expected. 
+    * Moreover, the error messages will be meaningless.
+    * The set up below errors due to not inputting the values in wei.
 
 1. Get the ForgivenetToken contract address from output. In this example, that is `0x04F0302d27bD225F70ad083460DAD636eDc3780C`.
 2. Get the RFF contract address. In our example, this is `0x9bd91b1062f29d40080A092bEbdd98daC6c635c6`.
