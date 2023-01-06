@@ -1,7 +1,7 @@
 types/
 .env
 .DS_Store
-.idea
+.idea/
 
 # Dependency directory
 node_modules
