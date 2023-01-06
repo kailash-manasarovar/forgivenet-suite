@@ -10,7 +10,7 @@ site
 
 # Generated files
 artifacts
-build
+build/
 dist
 coverage
 coverage.json
