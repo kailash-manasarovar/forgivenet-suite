@@ -1,0 +1,3 @@
+[submodule "forgivenet-frontend"]
+	path = forgivenet-frontend
+	url = https://github.com/kailash-manasarovar/forgivenet-frontend.git

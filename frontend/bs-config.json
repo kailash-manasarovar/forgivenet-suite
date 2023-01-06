@@ -1,7 +1,0 @@
-{
-  "server": {
-    "baseDir": ["./src"]
-  },
-  "open": false,
-  "notify": false
-}
