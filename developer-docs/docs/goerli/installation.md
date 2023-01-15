@@ -2,6 +2,8 @@
 
 ```sh
 git clone https://github.com/kailash-manasarovar/forgivenet-suite.git
+git submodule init # once only
+git submodule update
 ```
 
 ## npm install
@@ -14,18 +16,18 @@ npm install
 
 ## Run the app
 
-`cd` to the `frontend/src` directory, and run the following:
+`cd` to the `forgivenet-frontend/src` directory, check you're on the goerli branch with `git branch`, and run the following:
 
 ```sh
 npx http-server
 ```
 
-Agree to install it if prompted.
-
 ## Use the app
 
 The live app is now available at [http://127.0.0.1:8080](http://127.0.0.1:8080
-). Connect your MetaMask account and select the Goerli test network in MetaMask network options.
+). Connect your wallet account and select the Goerli test network.
+
+Test the app.
 
 !!! important
     Each test request only requires 0.00001 ETH.

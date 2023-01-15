@@ -15,8 +15,6 @@ nav:
       - Compile and deploy: compile-deploy.md
       - Truffle console:
           - Set up and test: set-up-and-test.md
-      - Remix:
-          - Set up and test: set-up-and-test-remix.md
   - Goerli testnet:
       - Pre-requisites: goerli/prerequisites.md
       - Installation and set up: goerli/installation.md
