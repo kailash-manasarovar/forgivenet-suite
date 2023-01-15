@@ -5,8 +5,6 @@ markdown-include
 mkdocs-markdownextradata-plugin
 mkdocs-exclude
 mkdocs-redirects
-mkdocs-git-revision-date-localized-plugin
-plantuml-markdown
-mkdocs-minify-plugin
-mkdocs-video
-mkdocs-render-swagger-plugin
+
+
+

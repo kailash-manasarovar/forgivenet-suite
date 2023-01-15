@@ -1,7 +1,9 @@
 There are a few steps you must take before the contracts are functional and the front end works locally.
 
 !!! important
-    This is a pain so it's probably easier to use Remix or, better still, go directly onto testing on testnet as all this is already set up.
+    * The following steps should be in one script so you don't have to do it every time. 
+    * Without automation, this is a pain right now, and I recommend working against a testnet directly instead.
+    * It is also erroring and I believe it is to do with ETH/WEI format mismatches but haven't been able to fix it.
 
 ## Steps
 
@@ -10,14 +12,13 @@ This is the flow. Full details are given below.
 !!! warning
     Skip any of these steps and the application won't work as expected. Moreover, the error messages will be meaningless.
 
-1. Get the ForgivenetToken contract address from output. In this example, that is `0x04F0302d27bD225F70ad083460DAD636eDc3780C`.
-2. Get the RFF contract address. In our example, this is `0x9bd91b1062f29d40080A092bEbdd98daC6c635c6`.
-3. Get the admin account address from Ganache. This should be address 0, or `0x7e8f8A0d509E419bb6bB7fd6e68dF38e2467473a`.
-4. Add the ETH receiving account to the main contract by calling the `addEthReceivingAccount` method on the RFF contract instance and passing a different Ganache account, e.g. address 5, or `0x30171Cd8Bf20Dd8E9cD46Ad80E52967e0a4cDcea`.
-5. Add the ForgivenetToken contract to the smart contract by calling the `addToken` method with the token contract address.
-6. In the token contract, approve the RFF contract address for 1000000 tokens by calling the `approve` method.
-7. Transfer 1000000 tokens to the RFF smart contract address from the token contract.
-8. Check disincentive. For testing this can be 0.
+1. Get the ForgivenetToken contract address.
+2. Get the RequestForForgiveness contract address. 
+3. Set the receiving account address from Ganache.
+4. Add the ForgivenetToken contract to the smart contract by calling the `addToken` method with the token contract address.
+5. In the token contract, approve the RFF contract address for 1000000 tokens by calling the `approve` method. 
+6. Transfer 1000000 tokens to the RFF smart contract address from the token contract.
+7. Check disincentive. For testing this can be 0.
 
 
 
@@ -38,42 +39,49 @@ We need objects of the contracts to call methods on.
 
 ```js
 let token = await ForgivenetToken.deployed()
+/* test address output */
+token.address
 ```
 
 ### Request For Forgiveness contract
 
 ```js
-let instance = await RequestForForgiveness.deployed()
+let request = await RequestForForgiveness.deployed()
+/* test address output */
+request.address
 ```
 
 ## Add ETH receiving account
 
 ```js
-instance.addEthReceivingAccount('0x30171Cd8Bf20Dd8E9cD46Ad80E52967e0a4cDcea') 
+let bank = await web3.eth.getAccounts()[5]
+/* test address output */
+bank
+request.addEthReceivingAccount(bank) 
 ```
 
 ## Add token to RFF contract
 
 ```js
-instance.addToken('0x04F0302d27bD225F70ad083460DAD636eDc3780C')
+request.addToken(token.address)
 ```
 
 ## Approve RFF to transfer 1000000 tokens
 
 ```js
-token.approve('0x9bd91b1062f29d40080A092bEbdd98daC6c635c6', 1000000000)
+token.approve(request.address, 1000000)
 ```
 
 ## Transfer 1000000 tokens to RFF contract
 
 ```js
-token.transfer('0x9bd91b1062f29d40080A092bEbdd98daC6c635c6', 1000000000)
+token.transfer(request.address, 1000000)
 ```
 
 ## Double check RFF contract owns 1000000 FRGVN tokens
 
 ```js
-token.balanceOf('0x9bd91b1062f29d40080A092bEbdd98daC6c635c6')
+token.balanceOf(request.address)
 ```
 
 ### Output
@@ -90,13 +98,13 @@ BN {
 ### Convert output to number
 
 ```js
-(await token.balanceOf('0x9bd91b1062f29d40080A092bEbdd98daC6c635c6')).toNumber()
+(await token.balanceOf(request.address)).toNumber()
 ```
 
 ## Check disincentive
 
 ```js
-instance.getDisincentive()
+request.getDisincentive()
 ```
 
 ## Call request forgiveness method
@@ -110,8 +118,5 @@ string = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo
 Call the method sending the string with a value of ETH that is more than the disincentive.
 
 ```js
-instance.requestForgiveness(string, {value: 1000000000000000})
+request.requestForgiveness(string, {value: 1000000000000000})
 ```
-
-!!! warning
-    This last method always fails and I don't know why, so I'm going to check how to write it in Remix.

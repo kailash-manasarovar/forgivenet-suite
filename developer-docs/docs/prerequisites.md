@@ -1,8 +1,6 @@
 !!! warning
     * Local set up instructions are not yet complete. 
-    * Please use the [Goerli testnet](/goerli/prerequisites) instructions for now.
-    * Feel free to use Sepolia.
-
+    * Please use the [Goerli testnet](/goerli/prerequisites) instructions or Sepolia in the same way. Check the notes on the [home page](/) for Sepolia contract addresses.
 
 You will need the following:
 
@@ -31,13 +29,13 @@ npm install -g truffle
 
 Truffle is a library which allows us to compile, deploy, and interact with Solidity smart contracts locally.
 
-The backend application is a Solidity app. You can see copies of the original files in the `/contracts` folder. We will be working with these.
+The backend application is a Solidity app. The original and deployed Solidity files are in the `/contracts` folder. We will be working with these.
 
 !!! note
     `Migrations.sol` is a default truffle file and is not part of the application.
 
 !!! danger
-    Do not change any code in the Solidity contracts unless you know what you are doing.
+    Do not change any code in the Solidity contracts unless you know what you are doing. It will not be merged.
 
 `FRGVN.sol` and `RequestForForgiveness.sol` are the application ERC20 token and smart contract respectively. These two files are now live and functional on the [Ethereum mainnet](https://etherscan.io/token/0x9d29f93e0a4c0bc5ac1e13d5b72038f35c81f325). 
 

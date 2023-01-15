@@ -11,11 +11,12 @@ git clone https://github.com/kailash-manasarovar/forgivenet-suite.git
 
 ## Initialise
 
-Run the following at the project root to set up truffle:
+* Run the following at the project root to set up truffle:
 
 ```bash
 truffle init
 ```
+* Say yes to everything.
 
 ## Compile 
 
@@ -30,6 +31,12 @@ This command picks up any `.sol` files in the `/contracts` folder and compiles t
 This is what you should see in your build folder after compiling.
 
 ![My compiled contracts](/images/compiled-contracts.png)
+
+If you did this before, you will instead see a note saying:
+
+```bash
+> Everything is up to date, there is nothing to compile.
+```
 
 ## Start up Ganache
 
