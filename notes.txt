@@ -8,8 +8,8 @@ FORGIVENET TODO
 Wallets
 ☐ Add Rabby and Trust and test them on mobile
 
-Fun stuff 
-☐ Test multi txs on Sepolia
+Research
+☐ How many tx's possible per minute
 
 Mainnet
 ☐ Create mainnet version, have it clean not a mess like before

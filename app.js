@@ -295,7 +295,7 @@ async function submitRequest(event) {
         const transaction = {
             from: account,
             to: CONTRACT_ADDRESS,
-            value,
+            value: "0x" + BigInt(value).toString(16),
             data
         };
 
