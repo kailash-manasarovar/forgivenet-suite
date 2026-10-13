@@ -5,13 +5,8 @@ Sepolia faucet: https://sepolia-faucet.pk910.de/
 
 FORGIVENET TODO
 
-Wallets
-☐ Add Rabby and Trust and test them on mobile
-
-Research
-☐ How many tx's possible per minute
-
 Mainnet
 ☐ Create mainnet version, have it clean not a mess like before
+☐ Create toggle to Sepolia Test version in black and white
 ☐ Publish
 ☐ Point 1frgvn.com at v2 and deprecate v1
