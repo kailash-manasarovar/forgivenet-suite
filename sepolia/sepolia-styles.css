@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+    color-scheme: light;
+    --black: #111111;
+    --white: #ffffff;
+    --grey: #666666;
+    --light-grey: #eeeeee;
+    --border: #222222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #111111;
+}
+
+/* NETWORK TOGGLE */
+
+.network-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 16px;
+    padding: 12px 14px;
+    background: #111111;
+    border: 2px solid #111111;
+    border-radius: 0;
+}
+
+.network-toggle::before {
+    content: "TEST NETWORK — SEPOLIA";
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.network-toggle a.mainnet-link {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 8px 12px;
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: background 0.15s ease;
+}
+
+.network-toggle a.mainnet-link:hover {
+    background: #dddddd;
+    color: #000000;
+}
+
+/* MAIN NAVIGATION */
+
+.main-nav {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    gap: 6px;
+}
+
+.main-nav a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #111111;
+    background: #ffffff;
+    padding: 10px 6px;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #222222;
+    box-shadow: none;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.main-nav a:hover {
+    background: #eeeeee;
+    color: #000000;
+    transform: none;
+    box-shadow: none;
+}
+
+.main-nav a.active {
+    background: #111111;
+    border-color: #111111;
+    color: #ffffff;
+}
+
+/* HEADINGS */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.04em;
+}
+
+h1 {
+    color: #111111;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+/* WALLET PANEL */
+
+#wallet {
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid #222222;
+    border-radius: 0;
+    background: #f7f7f7;
+}
+
+#account,
+#network {
+    margin: 8px 0 0;
+    word-break: break-all;
+    font-size: 0.8rem;
+}
+
+#account,
+#network,
+#tx-hash,
+.record-user {
+    overflow-wrap: anywhere;
+}
+
+/* FORM ELEMENTS */
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+textarea,
+input {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #777777;
+    border-radius: 0;
+    background: #ffffff;
+    color: #111111;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+textarea {
+    height: 250px;
+    resize: vertical;
+}
+
+textarea:focus,
+input:focus {
+    outline: 2px solid #111111;
+    outline-offset: 2px;
+    border-color: #111111;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #777777;
+    opacity: 1;
+}
+
+/* BUTTONS */
+
+button {
+    padding: 12px 24px;
+    border: 1px solid #111111;
+    border-radius: 0;
+    background: #111111;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+button:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #111111;
+    outline-offset: 3px;
+}
+
+/* STATUS */
+
+#status {
+    margin-top: 20px;
+    color: #333333;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+/* RECORD LEDGER */
+
+#ledger {
+    margin-top: 30px;
+}
+
+.record-entry {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-left: 4px solid #111111;
+    border-radius: 0;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: none;
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    opacity: 1;
+}
+
+.record-status {
+    text-align: center;
+    opacity: 1;
+    color: #555555;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+
+.record-user {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #dddddd;
+    font-size: 0.7rem;
+    opacity: 1;
+    color: #666666;
+    word-break: break-all;
+}
+
+.record-intro {
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    padding: 20px 24px;
+    background: #f7f7f7;
+    border: 1px solid #dddddd;
+    border-radius: 0;
+    line-height: 1.7;
+    font-size: 0.85rem;
+}
+
+.record-intro p {
+    margin: 0 0 14px 0;
+}
+
+.record-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.record-request {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 80px;
+    padding: 20px 0 10px;
+    border-top: 1px solid #dddddd;
+    text-align: center;
+    font-size: 0.7rem;
+    opacity: 1;
+    color: #666666;
+}
+
+footer a {
+    color: #111111;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+footer a:hover {
+    background: #eeeeee;
+}
+
+/* TRANSACTION MODAL */
+
+#tx-modal {
+    width: min(90%, 420px);
+    box-sizing: border-box;
+    padding: 30px;
+    border: 2px solid #111111;
+    border-radius: 0;
+    background: #ffffff;
+    color: #111111;
+    font-family: inherit;
+    text-align: center;
+    box-shadow: 8px 8px 0 #111111;
+}
+
+#tx-modal::backdrop {
+    background: #000000b3;
+    backdrop-filter: grayscale(1);
+}
+
+#tx-modal h2 {
+    color: #111111;
+    margin-top: 0;
+}
+
+#tx-hash {
+    display: block;
+    overflow-wrap: anywhere;
+    margin: 15px 0;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    background: #f7f7f7;
+    color: #111111;
+    font-size: 0.8em;
+}
+
+#tx-link {
+    display: block;
+    margin: 18px 0 12px;
+    padding: 12px 18px;
+    border: 1px solid #111111;
+    border-radius: 0;
+    background: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+#tx-link:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+#tx-close {
+    padding: 10px 24px;
+    border: 1px solid #111111;
+    border-radius: 0;
+    background: #ffffff;
+    color: #111111;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s ease;
+}
+
+#tx-close:hover {
+    background: #eeeeee;
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 600px) {
+    body {
+        margin: 20px auto;
+        padding: 14px;
+    }
+
+    .network-toggle {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .network-toggle::before {
+        font-size: 0.7rem;
+    }
+
+    .network-toggle a.mainnet-link {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 30px;
+    }
+
+    .main-nav a {
+        flex: 1 1 40%;
+        padding: 10px 6px;
+        font-size: 0.78rem;
+    }
+
+    #wallet {
+        padding: 15px;
+    }
+
+    .record-entry {
+        padding: 16px;
+        font-size: 0.75rem;
+    }
+
+    .record-intro {
+        padding: 16px;
+    }
+
+    #tx-modal {
+        padding: 22px;
+    }
+}
