@@ -1,5 +1,5 @@
 const CONTRACT =
-    "0x9BA081fA6612456EBba531c95A23d2CC6004190D";
+    "0xf9262f3fFFf92e6d8e4a3b59AcB4DFCcAe160878";
 
 const EVENT_TOPIC =
     "0x0cccf24739c21c35038997818efe2d64fca325679a834c4c5f328b7bfd6e14f5";
@@ -115,7 +115,7 @@ function createEntry(
             document.createElement("a");
 
         link.href =
-            "https://sepolia.etherscan.io/tx/" +
+            "https://etherscan.io/tx/" +
             transactionHash;
 
         link.target =
@@ -230,7 +230,7 @@ async function loadRecord() {
 
         const url =
             "https://api.etherscan.io/v2/api" +
-            "?chainid=11155111" +
+            "?chainid=1" +
             "&module=logs" +
             "&action=getLogs" +
             "&address=" + CONTRACT +

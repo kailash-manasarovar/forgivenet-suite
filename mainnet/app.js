@@ -1,5 +1,5 @@
 const CONTRACT_ADDRESS =
-    "0x9BA081fA6612456EBba531c95A23d2CC6004190D";
+    "0xf9262f3fFFf92e6d8e4a3b59AcB4DFCcAe160878";
 
 const CONTRACT_ABI = [
     {
@@ -17,7 +17,7 @@ const CONTRACT_ABI = [
     }
 ];
 
-const SEPOLIA_CHAIN_ID = "0xaa36a7";
+const MAINNET_CHAIN_ID = "0x1";
 
 let web3;
 let contract;
@@ -136,25 +136,25 @@ async function connectWallet(wallet) {
             method: "eth_chainId"
         });
 
-        if (chainId.toLowerCase() !== SEPOLIA_CHAIN_ID) {
+        if (chainId.toLowerCase() !== MAINNET_CHAIN_ID) {
             try {
                 await selectedProvider.request({
                     method: "wallet_switchEthereumChain",
                     params: [
-                        { chainId: SEPOLIA_CHAIN_ID }
+                        { chainId: MAINNET_CHAIN_ID }
                     ]
                 });
             } catch (error) {
                 if (error.code === 4902) {
                     status.textContent =
-                        "Sepolia is not configured in this wallet. Please add the Sepolia network first.";
+                        "Mainnet is not configured in this wallet. Please add the Mainnet network first.";
                     await updateNetwork();
                     return;
                 }
 
                 if (error.code === 4001) {
                     status.textContent =
-                        "Network switch cancelled. Please switch to Sepolia to continue.";
+                        "Network switch cancelled. Please switch to Mainnet to continue.";
                     await updateNetwork();
                     return;
                 }
@@ -198,11 +198,11 @@ async function updateNetwork() {
             method: "eth_chainId"
         });
 
-        if (chainId.toLowerCase() === SEPOLIA_CHAIN_ID) {
-            networkDisplay.textContent = "Network: Sepolia";
+        if (chainId.toLowerCase() === MAINNET_CHAIN_ID) {
+            networkDisplay.textContent = "Network: Mainnet";
         } else {
             networkDisplay.textContent =
-                "Network: Not Sepolia (" + chainId + ")";
+                "Network: Not Mainnet (" + chainId + ")";
         }
     } catch (error) {
         console.error(error);
@@ -259,7 +259,7 @@ async function submitRequest(event) {
     if (
         donation === "" ||
         !Number.isFinite(Number(donation)) ||
-        Number(donation) < 0.000001
+        Number(donation) <= 0.01
     ) {
         window.alert("A little more ETH please.");
         donationField.focus();
@@ -276,9 +276,9 @@ async function submitRequest(event) {
             method: "eth_chainId"
         });
 
-        if (chainId.toLowerCase() !== SEPOLIA_CHAIN_ID) {
+        if (chainId.toLowerCase() !== MAINNET_CHAIN_ID) {
             status.textContent =
-                "Please switch your wallet to Sepolia before submitting.";
+                "Please switch your wallet to Mainnet before submitting.";
             return;
         }
 
@@ -323,7 +323,7 @@ async function submitRequest(event) {
         txHashDisplay.textContent = txHash;
 
         txLink.href =
-            "https://sepolia.etherscan.io/tx/" + txHash;
+            "https://etherscan.io/tx/" + txHash;
 
         status.textContent = "";
 

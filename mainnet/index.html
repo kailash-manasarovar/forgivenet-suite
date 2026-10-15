@@ -29,7 +29,7 @@
     <h1>Request forgiveness</h1>
 
     <p>
-        Connect your wallet to Sepolia and submit your forgiveness request.
+        Connect your wallet to Ethereum Mainnet and submit your forgiveness request.
     </p>
 
     <div id="wallet">
@@ -47,7 +47,7 @@
 
         <label for="donation">Donation (ETH)</label>
 
-        <input id="donation" type="number" step="any" min="0" placeholder="Minimum 0.000001 ETH" required>
+        <input id="donation" type="number" step="any" min="0.01" placeholder="Amount greater than 0.01 ETH" required>
 
         <button type="submit">Send Request</button>
 
@@ -66,7 +66,7 @@
 
         <code id="tx-hash"></code>
 
-        <a id="tx-link" href="#" target="_blank" rel="noopener">View transaction on Sepolia Etherscan ↗</a>
+        <a id="tx-link" href="#" target="_blank" rel="noopener">View transaction on Etherscan ↗</a>
 
         <button id="tx-close" type="button">Close</button>
     </dialog>
