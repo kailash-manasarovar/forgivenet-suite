@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
 
 body {
 
@@ -358,4 +361,16 @@ footer a:hover {
 
 #tx-close:hover {
     background: #f5eafa;
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .main-nav a {
+        flex: 1 1 40%;
+        min-width: 0;
+    }
 }
