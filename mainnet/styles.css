@@ -29,9 +29,12 @@ body {
 }
 
 .main-nav {
+    position: relative;
     display: flex;
     width: 100%;
+    margin-top: 0;
     margin-bottom: 40px;
+    padding-top: 30px;
     gap: 8px;
 }
 
@@ -61,6 +64,41 @@ body {
     background: #fff1a8;
     border-color: #efd96b;
     color: #3f4b52;
+}
+
+.logo {
+    position: absolute;
+    top: -65px;
+    left: 0;
+}
+
+.logo img {
+    height: 90px;
+    width: auto;
+    display: block;
+}
+
+.logo a {
+    display: block;
+    line-height: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.logo a:hover {
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+    filter: none;
+}
+
+.footer-logo {
+    height: 32px;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 4px;
 }
 
 .network-toggle {

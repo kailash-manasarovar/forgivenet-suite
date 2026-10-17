@@ -5,8 +5,24 @@ Sepolia faucet: https://sepolia-faucet.pk910.de/
 
 FORGIVENET TODO
 
-Mainnet
-☐ Create toggle to Sepolia Test version in black and white
-☐ Create mainnet version, have it clean not a mess like before
-☐ Publish
-☐ Point 1frgvn.com at v2 and deprecate v1
+Responsive checks
+
+EDGE 
+
+iphone 16 pro max
+samsung galaxy a55
+pixel 9 pro fold
+.. fine but color ends
+ipad pro 13
+surface pro 10
+
+CHROME
+
+.. fine but color ends
+ipad pro 13
+surface pro 10
+
+FIREFOX
+
+4k Ultra HD nothing rendering
+
